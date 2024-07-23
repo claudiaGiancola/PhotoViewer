@@ -14,7 +14,6 @@ export const imageUrls = [
 
 interface ImageSelectorProps {
     selectImg : (url:string) => void;
-    toggleActive: () => void;
     selectedImgUrl: string;
 }
 
@@ -31,7 +30,7 @@ export function ImageSelector(props: ImageSelectorProps) {
 
                 {
                     imageUrls.map(imageUrls => {
-                        return <img className={`thumbnails ${props.selectedImgUrl === imageUrls ? "active" : ""}`} onClick={() => (props.selectImg(imageUrls))} src={imageUrls} />
+                        return <img className={`thumbnails ${props.selectedImgUrl === imageUrls ? "selected-thumb" : ""}`} onClick={() => (props.selectImg(imageUrls))} src={imageUrls} />
                     })
                 }
 

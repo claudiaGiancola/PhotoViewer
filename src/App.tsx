@@ -7,16 +7,11 @@ function App() {
 
   const [mainImgUrl, setMainImgUrl] = useState("https://images.pexels.com/photos/3359734/pexels-photo-3359734.jpeg");
 
-  const [isActive, setActive] = useState(false);
-  const [selectedImgUrl, setSelectedImgUrl] = useState(mainImgUrl);
-
-  function selectImg(url: string) {
+  const [selectedThumb, setSelectedThumb] = useState(mainImgUrl);
+  
+  function selectMainImg(url: string) {
     setMainImgUrl(url);
-    setSelectedImgUrl(url);
-  }
-
-  function toggleActive() {
-    setActive(!isActive);
+    setSelectedThumb(url);
   }
 
   return (
@@ -26,7 +21,7 @@ function App() {
       </div>
 
       <div>
-        <ImageSelector selectImg={selectImg} toggleActive={toggleActive} selectedImgUrl={selectedImgUrl} />
+        <ImageSelector selectImg={selectMainImg} selectedImgUrl={selectedThumb} />
       </div>
 
     </>
