@@ -1,3 +1,8 @@
+.title {
+    padding: 10vh;
+    text-align: center;
+}
+
 .main-img {
     width: 75vw;
     height: 70vh;
@@ -5,18 +10,38 @@
     border: solid purple 1vw;
 }
 
+.images-gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .thumbnails-gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     align-content: stretch;
     gap: 1vw;
+    margin-bottom: 10vh;
 }
 
 .thumbnails {
     width: 25vw;
     height: 20vh;
     object-fit: cover;
+}
+
+.thumbnails:hover {
+    cursor: pointer;
+    flex-grow: 0.1;
+    border: solid gold 0.3vw;
+}
+
+.select-img {
+    font-size: 2rem;
+    margin-left: 10vw;
+    padding: 4vh;
 }

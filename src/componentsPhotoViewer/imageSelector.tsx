@@ -12,28 +12,24 @@ export const imageUrls = [
     "https://cdn.pixabay.com/photo/2023/07/31/16/28/fantasy-8161364_1280.png"
 ];
 
-export function ImageSelector() {
+interface ImageSelectorProps {
+    selectImg : (url:string) => void;
+}
 
-    const [mainImgUrl, setMainImgUrl] = useState("https://images.pexels.com/photos/3359734/pexels-photo-3359734.jpeg");
-
-    function selectImg(url: string) {
-        setMainImgUrl(url);
-    }
+export function ImageSelector(prop: ImageSelectorProps) {
 
     return (
         <div>
-            <div>
-                <img className="main-img" src={mainImgUrl} />
-            </div>
 
             <div className="select-img">
                 Select your main dragon:
             </div>
 
             <div className='thumbnails-gallery'>
+
                 {
                     imageUrls.map(imageUrls => {
-                        return <img className='thumbnails' onClick={() => (selectImg(imageUrls))} src={imageUrls} />
+                        return <img className='thumbnails' onClick={() => (prop.selectImg(imageUrls))} src={imageUrls} />
                     })
                 }
             </div>
