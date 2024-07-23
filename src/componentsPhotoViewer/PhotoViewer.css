@@ -1,5 +1,5 @@
 .title {
-    padding: 10vh;
+    margin: 10vh;
     text-align: center;
 }
 
@@ -8,6 +8,10 @@
     height: 70vh;
     object-fit: cover;
     border: solid purple 1vw;
+}
+
+.selected-img-border {
+    border: solid purple 0.3vw;
 }
 
 .images-gallery {

@@ -32,6 +32,7 @@ export function ImageSelector(prop: ImageSelectorProps) {
                         return <img className='thumbnails' onClick={() => (prop.selectImg(imageUrls))} src={imageUrls} />
                     })
                 }
+
             </div>
         </div>
     )
