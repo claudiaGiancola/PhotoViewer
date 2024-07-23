@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./PhotoViewer.css";
 
 export const imageUrls = [
@@ -14,9 +14,11 @@ export const imageUrls = [
 
 interface ImageSelectorProps {
     selectImg : (url:string) => void;
+    toggleActive: () => void;
+    selectedImgUrl: string;
 }
 
-export function ImageSelector(prop: ImageSelectorProps) {
+export function ImageSelector(props: ImageSelectorProps) {
 
     return (
         <div>
@@ -29,7 +31,7 @@ export function ImageSelector(prop: ImageSelectorProps) {
 
                 {
                     imageUrls.map(imageUrls => {
-                        return <img className='thumbnails active' onClick={() => (prop.selectImg(imageUrls))} src={imageUrls} />
+                        return <img className={`thumbnails ${props.selectedImgUrl === imageUrls ? "active" : ""}`} onClick={() => (props.selectImg(imageUrls))} src={imageUrls} />
                     })
                 }
 

@@ -10,10 +10,6 @@
     border: solid purple 1vw;
 }
 
-.active {
-    border: solid gold 0.3vw;
-}
-
 .images-gallery {
     display: flex;
     flex-direction: column;
@@ -37,6 +33,10 @@
     height: 20vh;
     object-fit: cover;
     border: solid purple 0.3vw;
+}
+
+.active {
+    border: solid gold 0.3vw;
 }
 
 .thumbnails:hover {
