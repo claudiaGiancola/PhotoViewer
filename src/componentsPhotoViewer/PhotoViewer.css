@@ -1,0 +1,22 @@
+.main-img {
+    width: 75vw;
+    height: 70vh;
+    object-fit: cover;
+    border: solid purple 1vw;
+}
+
+.thumbnails-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+    gap: 1vw;
+}
+
+.thumbnails {
+    width: 25vw;
+    height: 20vh;
+    object-fit: cover;
+}
