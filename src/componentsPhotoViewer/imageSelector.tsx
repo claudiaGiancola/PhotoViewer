@@ -29,7 +29,7 @@ export function ImageSelector(prop: ImageSelectorProps) {
 
                 {
                     imageUrls.map(imageUrls => {
-                        return <img className='thumbnails' onClick={() => (prop.selectImg(imageUrls))} src={imageUrls} />
+                        return <img className='thumbnails active' onClick={() => (prop.selectImg(imageUrls))} src={imageUrls} />
                     })
                 }
 

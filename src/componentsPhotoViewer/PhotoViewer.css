@@ -10,8 +10,8 @@
     border: solid purple 1vw;
 }
 
-.selected-img-border {
-    border: solid purple 0.3vw;
+.active {
+    border: solid gold 0.3vw;
 }
 
 .images-gallery {
@@ -36,6 +36,7 @@
     width: 25vw;
     height: 20vh;
     object-fit: cover;
+    border: solid purple 0.3vw;
 }
 
 .thumbnails:hover {
