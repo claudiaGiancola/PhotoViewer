@@ -48,4 +48,4 @@ Steps:
 - Add an "onClick" event handler that updates the state when you click on a thumbnail
 - Change the appearance of the selected thumbnail by adding a new class to the selected thumbnail that makes a border appear around the selected thumbnail
 - "Lift state up" into App.tsx so that PhotoViewer.tsx and ImageSelector.tsx can communicate and share data
-- Add automated testing with Jest
+- Add automated testing with Jest > use `npm run test`

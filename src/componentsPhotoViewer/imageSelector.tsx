@@ -26,7 +26,7 @@ export function ImageSelector(props: ImageSelectorProps) {
                 Select your main dragon:
             </div>
 
-            <div className='thumbnails-gallery'>
+            <div className='thumbnails-gallery' data-testid="thumbnails-gallery">
 
                 {
                     imageUrls.map(imageUrls => {

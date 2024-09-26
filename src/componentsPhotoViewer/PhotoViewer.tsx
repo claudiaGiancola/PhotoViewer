@@ -1,4 +1,3 @@
-import React from "react";
 import "./PhotoViewer.css";
 
 export function PhotoViewer(props: any) {
@@ -9,7 +8,7 @@ export function PhotoViewer(props: any) {
             </div>
 
             <div>
-                <img className="main-img" src={props.mainImgUrl} />
+                <img className="main-img" src={props.mainImgUrl} data-testid="main-img"/>
             </div>
         </div>
     );
