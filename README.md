@@ -1,4 +1,9 @@
-# React + TypeScript + Vite
+# Photo Viewer
+
+Building a Photo Viewer App displaying a selection of thumbnail images and a single full larger image.
+Clicking on any of the thumbnails changes what is displayed in the larger image.
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -28,3 +33,19 @@ export default {
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+### Development
+
+React:
+- Declarative Programming
+- props
+- hooks
+
+Steps:
+- Building the "PhotoViewer.tsx" component for displaying the large selected image at the top of the page + edit "App.tsx" to include the new component
+- Add a prop to the "PhotoViewers.tsx" component so that it shows what we pass it in the "App.tsx"
+- Create the "ImageSelector.tsx" component. It displays the thumbnail gallery and has a "useState" hook that holds the URL of the currently selected image.
+- Add an "onClick" event handler that updates the state when you click on a thumbnail
+- Change the appearance of the selected thumbnail by adding a new class to the selected thumbnail that makes a border appear around the selected thumbnail
+- "Lift state up" into App.tsx so that PhotoViewer.tsx and ImageSelector.tsx can communicate and share data
+- Add automated testing with Jest
