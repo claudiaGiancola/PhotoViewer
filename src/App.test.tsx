@@ -21,3 +21,11 @@ describe("Elements correctly rendered on the web page", () => {
         expect(thumbnailsGallery).toBeInTheDocument();
     });
 })
+
+// describe("Regression / Snapshot testing", () => {
+//     test('the PhotoViewer component does not change unexpectedly', () => {
+        // const { getByTestId } = render(<App />);
+        // const thumbnailsGallery = getByTestId("thumbnails-gallery");
+        // expect(thumbnailsGallery).toBeInTheDocument();
+//     });
+// })

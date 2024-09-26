@@ -49,3 +49,7 @@ Steps:
 - Change the appearance of the selected thumbnail by adding a new class to the selected thumbnail that makes a border appear around the selected thumbnail
 - "Lift state up" into App.tsx so that PhotoViewer.tsx and ImageSelector.tsx can communicate and share data
 - Add automated testing with Jest > use `npm run test`
+
+Future testing implementations:
+- A "Regression / Snapshot" test to confirm that the "PhotoViewer" component doesn’t accidentally change in the future.
+- A "Component Test" to confirm that when I click a thumbnail, then the thumbnail becomes selected and the ImageViewer updates with the new image.
