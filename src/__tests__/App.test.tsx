@@ -1,7 +1,6 @@
 import { describe, expect, test } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { useState } from "react";
 import App from "../App";
 
 describe("Elements correctly rendered on the web page", () => {
@@ -24,8 +23,23 @@ describe("Elements correctly rendered on the web page", () => {
     });
 })
 
-describe("Selected thumbnail becomes main image", () => {
-    test("Default main img is correct", () => {
+describe("Images testing", () => {
+    test('Default main img is correct - snapshot test', () => {
+        render(<App />);
+
+        const mainImg = screen.getByTestId("main-img");
+
+        //do not format spacing otherwise the snapshot would result different and make the test fail
+        expect(mainImg).toMatchInlineSnapshot(`
+          <img
+            class="main-img"
+            data-testid="main-img"
+            src="https://images.pexels.com/photos/3359734/pexels-photo-3359734.jpeg"
+          />
+        `);
+
+    });
+    test("Default main img is correct - component test", () => {
         render(<App />);
 
         const mainImg = screen.getByTestId("main-img");
@@ -52,11 +66,3 @@ describe("Selected thumbnail becomes main image", () => {
         expect(mainImg).toHaveAttribute("src", selectedThumb.getAttribute("src"));
     });
 })
-
-// describe("Regression / Snapshot testing", () => {
-//     test('the PhotoViewer component does not change unexpectedly', () => {
-// const { getByTestId } = render(<App />);
-// const thumbnailsGallery = getByTestId("thumbnails-gallery");
-// expect(thumbnailsGallery).toBeInTheDocument();
-//     });
-// })
