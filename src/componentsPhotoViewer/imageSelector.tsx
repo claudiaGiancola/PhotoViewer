@@ -29,8 +29,8 @@ export function ImageSelector(props: ImageSelectorProps) {
             <div className='thumbnails-gallery' data-testid="thumbnails-gallery">
 
                 {
-                    imageUrls.map(imageUrls => {
-                        return <img className={`thumbnails ${props.selectedImgUrl === imageUrls ? "selected-thumb" : ""}`} onClick={() => (props.selectImg(imageUrls))} src={imageUrls} />
+                    imageUrls.map(image => {
+                        return <img className={`thumbnails ${props.selectedImgUrl === image ? "selected-thumb" : ""}`} data-testid={`selected-thumb-${imageUrls.indexOf(image)}`} onClick={() => (props.selectImg(image))} src={image} />
                     })
                 }
 
