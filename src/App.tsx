@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import './App.css'
-import { PhotoViewer } from './componentsPhotoViewer/PhotoViewer'
-import { ImageSelector } from './componentsPhotoViewer/imageSelector'
+import { useState } from 'react';
+import './App.css';
+import PhotoViewer from './componentsPhotoViewer/PhotoViewer';
+import ImageSelector from './componentsPhotoViewer/ImageSelector';
 
 function App() {
 

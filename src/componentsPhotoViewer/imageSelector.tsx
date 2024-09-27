@@ -1,4 +1,3 @@
-import React from 'react';
 import "./PhotoViewer.css";
 
 export const imageUrls = [
@@ -17,7 +16,7 @@ interface ImageSelectorProps {
     selectedImgUrl: string;
 }
 
-export function ImageSelector(props: ImageSelectorProps) {
+const ImageSelector: React.FC<ImageSelectorProps> = ({selectImg, selectedImgUrl}) => {
 
     return (
         <div>
@@ -30,12 +29,13 @@ export function ImageSelector(props: ImageSelectorProps) {
 
                 {
                     imageUrls.map(image => {
-                        return <img className={`thumbnails ${props.selectedImgUrl === image ? "selected-thumb" : ""}`} data-testid={`selected-thumb-${imageUrls.indexOf(image)}`} onClick={() => (props.selectImg(image))} src={image} />
+                        return <img className={`thumbnails ${selectedImgUrl === image ? "selected-thumb" : ""}`} data-testid={`selected-thumb-${imageUrls.indexOf(image)}`} onClick={() => (selectImg(image))} src={image} />
                     })
                 }
 
             </div>
         </div>
     )
-
 }
+
+export default ImageSelector;

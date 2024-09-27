@@ -1,6 +1,10 @@
 import "./PhotoViewer.css";
 
-export function PhotoViewer(props: any) {
+interface PhotoViewerProps {
+    mainImgUrl: string;
+}
+
+const PhotoViewer: React.FC<PhotoViewerProps> = ({mainImgUrl}) => {
     return (
         <div className='images-gallery'>
             <div>
@@ -8,8 +12,10 @@ export function PhotoViewer(props: any) {
             </div>
 
             <div>
-                <img className="main-img" src={props.mainImgUrl} data-testid="main-img"/>
+                <img className="main-img" src={mainImgUrl} data-testid="main-img"/>
             </div>
         </div>
     );
 }
+
+export default PhotoViewer;
